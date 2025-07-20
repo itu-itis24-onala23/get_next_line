@@ -1,8 +1,3 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non velit ac nisl iaculis tincidunt quis quis felis. Maecenas ac pellentesque elit. Integer ullamcorper dui dolor, sit amet tincidunt sem viverra ac. Etiam arcu leo, ullamcorper ac dictum nec, bibendum fermentum sapien. Duis sodales luctus ex non feugiat. Proin vehicula molestie nunc, ac luctus justo egestas eget. Donec mattis, magna non tincidunt porta, dolor nulla hendrerit ex, id ultricies nulla ante sed lacus.
-
-Duis sed ex sit amet dolor hendrerit imperdiet. Curabitur ultricies, libero tincidunt pharetra pulvinar, nunc quam interdum lorem, tristique blandit lectus odio at nulla.
- Sed dolor elit, viverra non facilisis sit amet, ornare eu purus. 
-Suspendisse rutrum maximus nunc gravida interdum. Nunc finibus consectetur augue vel tincidunt. Proin at lacus mauris. Integer enim mauris, mollis at dolor non, pellentesque viverra dolor. 
-Mauris volutpat nibh sed feugiat tincidunt. 
-Phasellus magna diam, faucibus id sem eget, aliquam gravida diam. Sed rhoncus molestie fermentum. Suspendisse eu auctor neque, sed mollis quam. 
-Pellentesque volutpat ipsum nibh, sollicitudin porta metus tristique ut. Integer mauris felis, convallis in nisi sed, tincidunt eleifend sem.
+merhaba aysem
+bugun gunlerden cuma
+saat 12.45

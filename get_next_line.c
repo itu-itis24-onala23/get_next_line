@@ -19,6 +19,8 @@ char* extract_line(char *stash)
     char *line;
     if(stash == NULL || stash[0] == '\0')
         return(NULL);
+    printf("newline in basladigi indis degeri %d\n",find_len(stash));
+    printf("stash in kendisi %s\n",stash);
     line = ft_substr(stash, 0, find_len(stash));
     return(line);
 }
@@ -39,6 +41,7 @@ char *read_and_stash(int fd, char *stash)
             return (NULL);
         }
         buffer[readByte] = '\0';
+        printf("bufferin icinde ne var %s\n",buffer);
         temp = ft_strjoin(stash, buffer);
         if(!temp)
         {
@@ -46,6 +49,8 @@ char *read_and_stash(int fd, char *stash)
             return(NULL);
         }
         stash = temp;
+        printf("tempin icinde ne var %s\n",temp);
+        printf("birlestirilmis hali nasil %s\n",stash);
     }
     free(buffer);
     return(stash);

@@ -65,7 +65,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*p;
 
 	if ((int)start > ft_strlen(s) || len == 0)
+	{
+		printf("start in degeri %d  stashin uzunlugu %d len in uzunlugu %d \n ",(int)start, ft_strlen(s), (int)len);
+		printf("stash degeri %s\n",s);
 		return (ft_strdup(""));
+	}
 	new_len = count(s, start, len);
 	i = 0;
 	p = (char *)malloc(new_len + 1);
