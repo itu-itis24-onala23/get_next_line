@@ -1,16 +1,17 @@
 #include "get_next_line.h"
-#include <stdio.h>
 
 int main(void)
 {
-    int fd = open("deneme.txt", O_RDONLY);
-    if (fd < 0)
+    int     fd;
+    char    *line;
+
+    fd = open("deneme.txt", O_RDONLY);
+    if (fd == -1)
     {
-        perror("Dosya açılamadı");
+        perror("Dosya acilamadi");
         return (1);
     }
 
-    char *line;
     while ((line = get_next_line(fd)) != NULL)
     {
         printf("%s", line);

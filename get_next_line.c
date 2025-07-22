@@ -19,8 +19,6 @@ char* extract_line(char *stash)
     char *line;
     if(stash == NULL || stash[0] == '\0')
         return(NULL);
-    printf("newline in basladigi indis degeri %d\n",find_len(stash));
-    printf("stash in kendisi %s\n",stash);
     line = ft_substr(stash, 0, find_len(stash));
     return(line);
 }
@@ -32,25 +30,24 @@ char *read_and_stash(int fd, char *stash)
     if(!buffer)
         return (NULL);
     int readByte = 1;
-    while(!find_len(stash) && readByte > 0)
+    while( readByte > 0 && !find_len(stash))
     {
+        printf("donguye girildi...\n");
         readByte = read(fd, buffer, BUFFER_SIZE);
+        printf("okunan byte sayisi %d\n",readByte);
+        if (readByte == 0)
+            break;
         if (readByte < 0)
         {
             free(buffer);
             return (NULL);
         }
         buffer[readByte] = '\0';
-        printf("bufferin icinde ne var %s\n",buffer);
-        temp = ft_strjoin(stash, buffer);
-        if(!temp)
-        {
-            free(buffer);
-            return(NULL);
-        }
-        stash = temp;
-        printf("tempin icinde ne var %s\n",temp);
-        printf("birlestirilmis hali nasil %s\n",stash);
+        printf(" okunan buffer degeri %s\n",buffer);
+        temp = stash;
+        stash = ft_strjoin(stash, buffer);
+        printf("joinlenmis stash degeri %s\n",stash);
+        free(temp);
     }
     free(buffer);
     return(stash);
@@ -83,6 +80,7 @@ char *get_next_line(int fd)
         return(NULL);
 
     stash = read_and_stash(fd, stash);
+    printf("çikan stash degeri %s\n",stash);
     if(!stash)
         return(NULL);
     line = extract_line(stash);
